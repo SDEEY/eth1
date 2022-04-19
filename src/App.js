@@ -36,7 +36,7 @@ function App() {
     }
 
     const getBalance = async () => {
-      let responseBalance = await window.ethereum.request({method: 'eth_getBalance', params:[fromWallet[0], 'latest']}).catch(err => {
+      let responseBalance = await window.ethereum.request({method: 'eth_getBalance', params:[fromWallet, 'latest']}).catch(err => {
           console.log(err)
       })
         console.log('Простой',responseBalance,'Непонятный',parseInt(responseBalance) / Math.pow(10, 18))
