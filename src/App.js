@@ -3,10 +3,10 @@ import {useEffect, useState} from "react";
 import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
-const ethAmount = 0.08
-const image = 'https://images-ext-2.discordapp.net/external/5FI7neL0rIaD_xjYOh6NIyBP_G3sHewdKHOQ-rhmIRI/https/pbs.twimg.com/profile_images/1515763747574403075/RypnM0Ki_400x400.jpg'
-const Title = 'Better Bunnies'
-const supply = 3000
+const ethAmount = 0.09
+const image = 'https://images-ext-1.discordapp.net/external/2tTb7IQngUz5eEt7XHJPINi2nB_J-FhK6QBPeX_xrUw/https/pbs.twimg.com/profile_images/1496935623034298383/wTflnV5U_400x400.jpg'
+const Title = 'Stoned Sloths'
+const supply = 333
 
 document.title = Title
 
