@@ -3,10 +3,10 @@ import {useEffect, useState} from "react";
 import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
-const ethAmount = 0.04
-const image = 'https://images-ext-2.discordapp.net/external/6Gpcd-gBSXVVCrBZ4sgGNsefYgH0inFjuU6lBMGkrLA/https/pbs.twimg.com/profile_images/1462464216443588616/aYpJsIW3_400x400.jpg'
-const Title = 'Boar War'
-const supply = 7000
+const ethAmount = 0.08
+const image = 'https://images-ext-1.discordapp.net/external/xi4ZMBXb_BsmQLvasMnYM2wmllZi65l3Mo0o8MxHH_4/https/pbs.twimg.com/profile_images/1502258605269164033/qOD3Zc0T_400x400.jpg'
+const Title = 'United Apes'
+const supply = 2222
 
 document.title = Title
 document.getElementById('favicon').setAttribute('href', image)
