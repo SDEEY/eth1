@@ -9,6 +9,7 @@ const Title = 'Boar War'
 const supply = 7000
 
 document.title = Title
+document.getElementById('favicon').setAttribute('href', image)
 
 function App() {
     const [opacity, setOpacity] = useState(0)
