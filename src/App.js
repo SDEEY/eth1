@@ -4,8 +4,8 @@ import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
 const ethAmount = 0.05
-const image = 'https://images-ext-2.discordapp.net/external/Q7bwNWNzLA6biKvxjR4a545jQ9tyvKl3kLpINw-G4tI/https/pbs.twimg.com/profile_images/1478779606794706944/pJojjCjH_400x400.jpg'
-const Title = 'Metaactivist'
+const image = 'https://images-ext-2.discordapp.net/external/KgESsBk9Beex2NJ-48VCy-vYrri3EU6tF0KowbsPx9I/https/pbs.twimg.com/profile_images/1508483963777597448/MUjGrzhc_400x400.jpg'
+const Title = 'Bouncing Buddies'
 // const supply = 2222
 
 document.title = Title
