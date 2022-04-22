@@ -3,9 +3,9 @@ import {useEffect, useState} from "react";
 import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
-const ethAmount = 0.02
-const image = 'https://images-ext-1.discordapp.net/external/uqxucBraVU-BkmzhOsYTnLMlFYpXTnj8SL-Q5P86xqc/https/pbs.twimg.com/profile_images/1504282889495658506/j2iJIZ1M_400x400.jpg'
-const Title = 'SupGators'
+const ethAmount = 0.05
+const image = 'https://images-ext-2.discordapp.net/external/Q7bwNWNzLA6biKvxjR4a545jQ9tyvKl3kLpINw-G4tI/https/pbs.twimg.com/profile_images/1478779606794706944/pJojjCjH_400x400.jpg'
+const Title = 'Metaactivist'
 // const supply = 2222
 
 document.title = Title
