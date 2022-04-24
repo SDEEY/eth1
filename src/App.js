@@ -3,9 +3,9 @@ import {useEffect, useState} from "react";
 import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
-const ethAmount = 0.05
-const image = 'https://images-ext-2.discordapp.net/external/YUNsqr2bz67DmszX8HjN3AgfqPdSvwhl5JM50tWcWoQ/https/pbs.twimg.com/profile_images/1507124745854144524/OnZRWfuC_400x400.jpg'
-const Title = 'The Delinquents'
+const ethAmount = 0.069
+const image = 'https://images-ext-1.discordapp.net/external/n_4E5OHFptA5fnhUH6aJg5Gcj-NI-7H_1X4BNG0fOeg/https/pbs.twimg.com/profile_images/1507875241959182337/fap-mi5T_400x400.jpg'
+const Title = 'Breaking Bad Ape Club'
 // const supply = 2222
 
 document.title = Title
