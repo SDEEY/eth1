@@ -4,8 +4,8 @@ import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
 const ethAmount = 0.05
-const image = 'https://images-ext-1.discordapp.net/external/AAMTw05GrleMsVDJPdz5je9o8czTiUzRKxCzLK2NMnU/https/pbs.twimg.com/profile_images/1505735261572980738/LIxhuOAZ_400x400.jpg'
-const Title = 'Crypto Lynx'
+const image = 'https://images-ext-2.discordapp.net/external/YUNsqr2bz67DmszX8HjN3AgfqPdSvwhl5JM50tWcWoQ/https/pbs.twimg.com/profile_images/1507124745854144524/OnZRWfuC_400x400.jpg'
+const Title = 'The Delinquents'
 // const supply = 2222
 
 document.title = Title
