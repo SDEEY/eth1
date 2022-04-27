@@ -3,9 +3,9 @@ import {useEffect, useState} from "react";
 import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
-const ethAmount = 0.1
-const image = 'https://images-ext-1.discordapp.net/external/obUiumqMAL5oIbnSyguKg6E17yD4J0JwdicqWPUW8-Y/https/pbs.twimg.com/profile_images/1501119620132098050/RAIVrKAE_400x400.jpg'
-const Title = 'Komorebi No Sekai'
+const ethAmount = 0.065
+const image = 'https://images-ext-2.discordapp.net/external/Dp9P4JAHqs5j6pU2X6U0CB9d5p3qrdkq2nrbvvI6F04/https/pbs.twimg.com/profile_images/1455657612297519114/d-60wmz0_400x400.jpg'
+const Title = 'Pin Master'
 // const supply = 2222
 
 document.title = Title
