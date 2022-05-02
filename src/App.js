@@ -3,9 +3,9 @@ import {useEffect, useState} from "react";
 import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
-const ethAmount = 0.07
-const image = 'https://images-ext-2.discordapp.net/external/-MMI0s4aViVntjL34p24uMB2bi4cH0JaafUfZlrZnhM/https/pbs.twimg.com/profile_images/1509873515629105194/O_3cCv7e_400x400.jpg'
-const Title = 'Confused Heroes'
+const ethAmount = 0.015
+const image = 'https://images-ext-1.discordapp.net/external/93qMdMsA9jX4C3iI3snF0JHLCtoRCi1aXas2h7TPIL8/https/pbs.twimg.com/profile_images/1505552645603434499/qWpDEQjD_400x400.jpg'
+const Title = 'My Panties NFT'
 // const supply = 2222
 
 document.title = Title
