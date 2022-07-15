@@ -3,10 +3,10 @@ import {useEffect, useState} from "react";
 import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
-const ethAmount = 0.015
-const image = 'https://images-ext-1.discordapp.net/external/93qMdMsA9jX4C3iI3snF0JHLCtoRCi1aXas2h7TPIL8/https/pbs.twimg.com/profile_images/1505552645603434499/qWpDEQjD_400x400.jpg'
-const Title = 'My Panties NFT'
-// const supply = 2222
+const solAmount = 0.4
+const image = 'https://howrare.is/drop_logos/5508_tuQbWorE.jpg'
+const Title = 'Scrooge Duck City'
+// const supply = 5444
 
 document.title = Title
 document.getElementById('favicon').setAttribute('href', image)
