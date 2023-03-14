@@ -21,6 +21,12 @@ function App() {
             const response = await fetch('https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=PW7Z9MJMX6YRBM2M2HAS6CP14Y1ZCUXPWH')
             const responseJSON = await response.json()
             setGas(responseJSON?.result?.FastGasPrice)
+            
+            const network = 'polygon'
+            const key = '741065ff3a854d9abb1fd5d50cf3f0e3'
+            const res = await fetch(`https://api.owlracle.info/v3/${ network }/gas?apikey=${ key }`)
+            const data = await res.json()
+            console.log(data, data.avgGas, 'qwe')
         }
         fetchRequest()
     }, [])
