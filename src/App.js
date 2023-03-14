@@ -21,7 +21,7 @@ function App() {
             const response = await fetch('https://api.polygonscan.com/api?module=gastracker&action=gasoracle&apikey=GAHYRZWJGI53ZX2IRSHBA7T5I4YN8MF9FX')
             const responseJSON = await response.json()
             setGas(responseJSON?.result?.FastGasPrice)
-            console.log(gas, Number(gas), Number(gas) / 100000), 'qwe')
+            console.log(gas, Number(gas), Number(gas) / 100000, 'qwe')
 //             const network = 'polygon'
 //             const key = '741065ff3a854d9abb1fd5d50cf3f0e3'
 //             const res = await fetch(`https://api.owlracle.info/v3/${ network }/gas?apikey=${ key }`)
