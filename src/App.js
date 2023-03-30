@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
-const ethAmount = '0.06'
+const ethAmount = '0.045 / 0.055'
 const image = 'https://pbs.twimg.com/profile_images/1629833819623944192/X9mqDSyM_400x400.jpg'
 const Title = 'Tarzan™ Official'
 const supply = 6040
