@@ -6,7 +6,7 @@ import imgTwitter from './icons8-twitter-50.png'
 const ethAmount = '38'
 const image = 'https://pbs.twimg.com/profile_images/1641790809207894016/xlhYhiuJ_400x400.jpg'
 const Title = 'erable°'
-const supply = 180
+const supply = 168
 
 document.title = Title
 document.getElementById('favicon').setAttribute('href', image)
