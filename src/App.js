@@ -4,9 +4,9 @@ import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
 const ethAmount = '0'
-const image = 'https://pbs.twimg.com/profile_images/1631534701084299265/FLSAPZIX_400x400.jpg'
-const Title = 'Last Remains'
-const supply = 4580
+const image = 'https://pbs.twimg.com/profile_images/1618354797333061633/a5wAOybo_400x400.jpg'
+const Title = 'Stupid Sperm Swimming Club'
+const supply = 2488
 
 document.title = Title
 document.getElementById('favicon').setAttribute('href', image)
