@@ -6,7 +6,7 @@ import imgTwitter from './icons8-twitter-50.png'
 const ethAmount = '0'
 const image = 'https://pbs.twimg.com/profile_images/1633206750802313216/XFeEWXVb_400x400.jpg'
 const Title = 'MasterP&Co'
-const supply = 2222
+const supply = 815
 
 document.title = Title
 document.getElementById('favicon').setAttribute('href', image)
