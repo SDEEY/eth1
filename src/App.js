@@ -3,10 +3,10 @@ import {useEffect, useState} from "react";
 import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
-const ethAmount = '0'
-const image = 'https://pbs.twimg.com/profile_images/1650131835232440323/8KBq5dz-_400x400.jpg'
-const Title = 'Tentacle Lodge'
-const supply = 3690
+const ethAmount = '0.5'
+const image = 'https://pbs.twimg.com/profile_images/1625380439731863554/_UtOvswi_400x400.jpg'
+const Title = 'KICK'
+const supply = 471
 
 document.title = Title
 document.getElementById('favicon').setAttribute('href', image)
