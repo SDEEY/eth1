@@ -3,8 +3,8 @@ import {useEffect, useState} from "react";
 import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
-const ethAmount = '50/65'
-const image = 'https://pbs.twimg.com/profile_images/1621126122619428865/qOzgU0oo_400x400.jpg'
+const ethAmount = '25'
+const image = 'Rival Bears'
 const Title = 'Good Time Pals NFT'
 const supply = 1741
 
