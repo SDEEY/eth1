@@ -5,7 +5,7 @@ import imgTwitter from './icons8-twitter-50.png'
 
 const ethAmount = '0.03'
 const image = 'https://pbs.twimg.com/profile_images/1631159404673507328/WkFmEY8X_400x400.jpg'
-const Title = 'VANIN'
+const Title = 'VANIN2'
 const supply = 971
 
 document.title = Title
