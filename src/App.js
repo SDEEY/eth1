@@ -6,7 +6,7 @@ import imgTwitter from './icons8-twitter-50.png'
 const ethAmount = '0'
 const image = 'https://pbs.twimg.com/profile_images/1690997775784443904/GDf5WOJB_400x400.jpg'
 const Title = 'Kentaro'
-const supply = 500
+const supply = 77
 
 document.title = Title
 document.getElementById('favicon').setAttribute('href', image)
