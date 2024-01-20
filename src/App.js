@@ -5,7 +5,7 @@ import imgTwitter from './icons8-twitter-50.png'
 
 const ethAmount = '0.05'
 const image = 'https://pbs.twimg.com/profile_images/1721977791095209984/Un3tKijC_400x400.jpg'
-const Title = 'NFTapas
+const Title = 'NFTapas'
 const supply = 111
 
 document.title = Title
